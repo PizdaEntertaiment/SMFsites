@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МАКС - Безопасный мессенджер</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Background */
+        .bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('image3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -2;
+        }
+
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: -1;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            width: 140px;
+            height: 43px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .btn-download {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #fff;
+            background: linear-gradient(135deg, #4f8ef7 0%, #7b5cf5 100%);
+            border: none;
+            border-radius: 24px;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        .btn-download:hover {
+            opacity: 0.9;
+        }
+
+        /* Main content */
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 60px 16px 40px;
+            min-height: calc(100vh - 68px);
+        }
+
+        /* Card */
+        .card {
+            width: 100%;
+            max-width: 360px;
+            background-color: #1a1d26;
+            border-radius: 24px;
+            padding: 36px 28px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Avatar */
+        .avatar-wrap {
+            display: inline-block;
+            width: 82px;
+            height: 82px;
+            border-radius: 20px;
+            padding: 3px;
+            background: linear-gradient(135deg, #4f8ef7 0%, #7b5cf5 100%);
+            margin-bottom: 16px;
+        }
+
+        .avatar-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 18px;
+            overflow: hidden;
+            background-color: #1a1d26;
+        }
+
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Title */
+        .title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .handle {
+            font-size: 14px;
+            color: #8b8e99;
+            margin-bottom: 20px;
+        }
+
+        /* Description */
+        .desc {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .links {
+            margin-bottom: 24px;
+        }
+
+        .link-row {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 4px;
+        }
+
+        .link-row a {
+            color: #4f8ef7;
+            text-decoration: none;
+        }
+
+        .link-row a:hover {
+            color: #7b5cf5;
+            text-decoration: underline;
+        }
+
+        /* CTA Button */
+        .btn-channel {
+            display: block;
+            width: 100%;
+            padding: 14px 24px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            background: linear-gradient(135deg, #4f8ef7 0%, #7b5cf5 100%);
+            border: none;
+            border-radius: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-channel:hover {
+            opacity: 0.9;
+        }
+
+        .btn-channel:active {
+            transform: scale(0.98);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="bg-overlay"></div>
+
+    <header class="header">
+        <img src="image2.png" alt="Logo" class="logo">
+        <button class="btn-download">Скачать приложение</button>
+    </header>
+
+    <main class="main">
+        <div class="card">
+            <div class="avatar-wrap">
+                <div class="avatar-inner">
+                    <img src="image1.jpg" alt="TikTokModCloud Avatar" class="avatar-img">
+                </div>
+            </div>
+
+            <h1 class="title">ПодслушаННо | Нижний Новгород</h1>
+
+            <p class="desc">Официальный канал новостей и сплетней Нижнего Новгорода в MAX!</p>
+
+            <div class="links">
+                <p class="link-row">По рекламе: <a href="https://t.me/dkdjkskfkvmbh" target="_blank" rel="noopener noreferrer">https://t.me/ninoadminnnnn</a></p>
+            </div>
+
+            <a href="https://linkmax.sbs/35hu4fr7e3friu/" target="_blank" rel="noopener noreferrer" class="btn-channel">Перейти в канал</a>
+        </div>
+    </main>
+</body>
+</html>
